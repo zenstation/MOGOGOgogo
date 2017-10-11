@@ -1,6 +1,8 @@
 .eaglepath {
     background: url("../img/eagle.png") no-repeat;
     background-size: cover;
+    background-position: center center;
+
 }
 
 .navbar, .navbar:focus, .navbar:active, .navbar:hover {
@@ -90,10 +92,9 @@
 }
 
 .navbar-toggle, span.icon-bar {
-    border-color: #fce38a;
-    border-bottom: #fce38a;
-    border: 3px solid;
-    border-radius: 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
 }
 
 .pic-num1 {
