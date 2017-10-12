@@ -105,41 +105,98 @@
 }
 
 .grad_boxes {
-    margin: 50px auto 50px;
-    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.layer_one {
-    z-index: 1;
-    position: absolute;
+@media (max-width: 1200px) {
+    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
+        margin-left: 25%;
+    }
 }
 
-.layer_two {
-    background: linear-gradient(to bottom, #db7574, #e3cd7c);
-    z-index: 2;
-    position: absolute;
-    opacity: 0.7;
-    display: none;
-    margin: 70px 0 0 140px;
-    padding: 0 0 0 0;
+@media (max-width: 400px) {
+    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
+        margin-left: 2%;
+        width: inherit;
+    }
+}
 
+.grad_boxes_one {
+    background: url("../img/apple_table.png") no-repeat;
+    height: 250px;
+    width: 380px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.grad_boxes_two {
+    background: url("../img/iphone6.png") no-repeat;
+    height: 250px;
+    width: 380px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.grad_boxes_tree {
+    background: url("../img/fucking_fikus.png") no-repeat;
+    height: 250px;
+    width: 380px;
+    margin-bottom: 10px;
+}
+
+.shadow_icon h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .shadow_icon {
-    color: white;
-}
-
-.shadow_text {
-    color: white;
+    padding-top: 25%;
+    display: none;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    display: inline;
+    line-height: 250px;
+    text-align: center;
+    color: #fff;
 }
 
-.grad_boxes:hover > div.layer_two {
-    z-index: 1;
+.grad_boxes_one:hover .shadow_icon {
     display: block;
+    background: linear-gradient(to bottom, #db7675, #ebd483);
+    opacity: 0.7;
+    cursor: pointer;
+    height: 250px;
+    width: 380px;
+    margin-left: 0;
+    position: relative;
+    left: -15px;
+}
+
+.grad_boxes_two:hover .shadow_icon {
+    display: block;
+    background: linear-gradient(to bottom, #db7675, #ebd483);
+    opacity: 0.7;
+    cursor: pointer;
+    height: 250px;
+    width: 380px;
+    margin-left: 0;
+    position: relative;
+    left: -15px;
+}
+
+.grad_boxes_tree:hover .shadow_icon {
+    display: block;
+    background: linear-gradient(to bottom, #db7675, #ebd483);
+    opacity: 0.7;
+    cursor: pointer;
+    height: 250px;
+    width: 380px;
+    margin-left: 0;
+    position: relative;
+    left: -15px;
 }
 
 .black {
