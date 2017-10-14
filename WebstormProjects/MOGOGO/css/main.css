@@ -89,6 +89,7 @@
     color: #d0d0d0;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    margin-top: 50px;
 }
 
 .navbar-toggle, span.icon-bar {
@@ -263,4 +264,17 @@
 
 .mini_text {
     margin-left: 60px;
+}
+
+.river {
+    background: gray;
+    height: 832px;
+}
+
+.iDev {
+    margin-top: 50px;
+}
+
+.services {
+    margin: 50px 0;
 }
