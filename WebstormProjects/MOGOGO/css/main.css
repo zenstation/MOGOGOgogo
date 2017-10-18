@@ -1,3 +1,19 @@
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+.carousel-indicators li {
+    height: auto;
+    text-indent: 0;
+    color: #fff;
+}
+
 .eaglepath {
     background: url("../img/eagle.png") no-repeat;
     background-size: cover;
@@ -57,10 +73,34 @@
 .carousel-indicators li.active {
     border-radius: 0;
     border-color: transparent;
-    margin: 0 10px;
     width: 175px;
-    height: 5px;
-    background: url("../img/slider.png") repeat-y;
+    height: auto;
+    background: none;
+    margin: 0 10px;
+    border: none;
+    border-top: 3px solid #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+
+@keyframes width100 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.carousel-indicators li.active::before {
+    content: ' ';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-top: 3px solid #f38181;
+    animation: width100 3s 1 linear;
 }
 
 .carousel-indicators li {
@@ -68,8 +108,11 @@
     border-color: transparent;
     margin: 0 10px;
     width: 175px;
-    height: 5px;
-    background: url("../img/slider-no-active.png") repeat-y;
+    height: auto;
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    background: none;
+    text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .what_we_do h2 {
@@ -110,40 +153,48 @@
     margin-bottom: 50px;
 }
 
-@media (max-width: 1200px) {
-    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
-        margin-left: 25%;
-    }
-}
-
-@media (max-width: 400px) {
-    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
-        margin-left: 2%;
-        width: inherit;
-    }
-}
-
 .grad_boxes_one {
     background: url("../img/apple_table.png") no-repeat;
     height: 250px;
     width: 380px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 
 .grad_boxes_two {
     background: url("../img/iphone6.png") no-repeat;
     height: 250px;
     width: 380px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 
-.grad_boxes_tree {
+.grad_boxes_three {
     background: url("../img/fucking_fikus.png") no-repeat;
     height: 250px;
     width: 380px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
+}
+
+.grad_boxes_one, .grad_boxes_two, .grad_boxes_three {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s;
+}
+
+.grad_boxes_one:hover, .grad_boxes_two:hover, .grad_boxes_three:hover {
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 5px 5px 0 #95e1d3;
+}
+
+@media (max-width: 1200px) {
+    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
+    }
+}
+
+@media (max-width: 400px) {
+    .grad_boxes_one, .grad_boxes_two, .grad_boxes_tree {
+    }
 }
 
 .shadow_icon h3 {
@@ -267,14 +318,82 @@
 }
 
 .river {
-    background: gray;
+    background: url("../img/background2.jpg");
+
     height: 832px;
 }
 
 .iDev {
     margin-top: 50px;
+
 }
 
 .services {
     margin: 50px 0;
+}
+
+#miniCarousel {
+    height: 150px;
+}
+
+.mini_slids {
+    height: 150px;
+    background: #3c3c3c;
+}
+
+.item {
+    min-height: 150px;
+}
+
+.carousel-inner {
+    min-height: 150px;
+}
+
+.quote {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
+    color: gray;
+}
+
+.quote_author {
+    font-family: 'Kaushan Script', cursive;
+    color: #333333;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: transparent;
+    height: 150px;
+    overflow-y: scroll;
+    margin: 19px;
+    padding: 0;
+}
+
+.panel-title {
+    position: relative;
+}
+
+.panel-title::after {
+    content: "\f078";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    font-weight: bold;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-bottom: 1px;
+    border-top: 1px;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
