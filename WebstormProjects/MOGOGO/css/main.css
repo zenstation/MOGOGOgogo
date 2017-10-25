@@ -487,6 +487,13 @@
 .comm {
     margin-left: 20px;
 }
+.comments > p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #a6a6a6;
+}
 .likes > i {
     color: #95e1d3;
 }
+
